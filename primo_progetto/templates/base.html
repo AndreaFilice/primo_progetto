@@ -23,11 +23,11 @@
                     Prima
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Indice</a>
-                        <a class="dropdown-item" href="#">HomePage</a>
-                        <a class="dropdown-item" href="#">Menu</a>
-                        <a class="dropdown-item" href="#">Chi Siamo?</a>
-                        <a class="dropdown-item" href="#">Variabili</a>
+                        <a class="dropdown-item" href="/ ">Indice</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:homepage' %}">HomePage</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:lista' %}">Menu</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:chiSiamo' %}">Chi Siamo?</a>
+                        <a class="dropdown-item" href="{% url 'prima_app:variabili' %}">Variabili</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
