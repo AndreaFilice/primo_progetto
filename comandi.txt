@@ -1,0 +1,13 @@
+-- SETUP ENVIRONMENT
+GENERARE LA VIRTUAL ENV: py -m venv env
+AGGIORNA PIP: pip install --upgrade pip
+INSTALLA DJANGO: pip install django (<pacchetto>)
+
+-- RUNNARE DJANGO
+ESEGUIRE MIGRATIONS: python manage.py migrate
+ESEGUIRE RUNSERVER: python manage.py runserver
+
+-- CREAZIONE/GESTIONE APP o PROGETTI
+CREA PROGETTO: django-admin startproject <nome_progetto>
+CREA APPLICAZIONE: py manage.py startapp <nome_app>
+CREA ADMIN: py manage.py createsuperuser
