@@ -13,3 +13,6 @@ def esempio_if_elif(request):
 def es_for(request):
     dict = { 'list1': [1, datetime.date(2019, 7, 16), 'Do not give up!'], 'list2': [1, datetime.date(2019, 7, 16), 'Do not give up!'], 'my_dict' : {'chiave1': 'Valore 1', 'chiave2': 'Valore 2'} }
     return render(request, "es_for.html", dict)
+
+def index(request):
+    return render(request, "indice.html")
