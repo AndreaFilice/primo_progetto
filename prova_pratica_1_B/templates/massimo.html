@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{%block title%} {{block.super}} | MASSIMO {%endblock title%}
+{%block content%}
+    {% if var1 > var2 and var1 > var3 %}
+        <b>var1 = <span style="color: green;"> {{ var1 }}</span></b> <br/>
+        <b>var2 = {{ var2 }}</b> <br/>
+        <b>var3 = {{ var3 }}</b> <br/>
+        <p><i>var1 è il numero maggiore.</i></p>
+    {% elif var2 > var1 and var2 > var3 %}
+        <b>var1 = {{ var1 }}</b> <br/>
+        <b>var2 = <span style="color: green;"> {{ var2 }}</span></b> <br/>
+        <b>var3 = {{ var3 }}</b> <br/>
+        <p><i>var2 è il numero maggiore.</i></p>
+    {% elif var3 > var1 and var3 > var2 %}
+        <b>var1 = {{ var1 }}</b> <br/>
+        <b>var2 = {{ var2 }}</b> <br/>
+        <b>var3 = <span style="color: green;"> {{ var3 }}</span></b> <br/>
+        <p><i>var3 è il numero maggiore.</i></p>
+    {% endif %}
+{%endblock content%}
