@@ -93,4 +93,4 @@ def queryBase(request):
     articoli_minime_visualizzazioni = Articolo.objects.filter(visualizzazioni_gte=100)
     articoli_parola = Articolo.objects.filter(titolo_icontains='importante')
 
-    context = {'articoli_cognome': articoli_cognome, 'numero totale articoli': numero_totale_articoli}
+    context = {'articoli_cognome': articoli_cognome, 'numero_totale_articoli': numero_totale_articoli}

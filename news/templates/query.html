@@ -1,0 +1,8 @@
+{% extends 'base.html'%}
+{%block title%} Query Base {%endblock title%}
+{%block content%}
+{% for articoli in articoli_cognome %}
+	<h1>{{ articoli }}</h1>
+{% endfor %}
+
+{% endblock content %}
