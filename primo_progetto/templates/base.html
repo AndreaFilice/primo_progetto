@@ -52,6 +52,19 @@
                         <a class="dropdown-item" href="{% url 'prova_pratica_1_B:studenti' %}">Studenti</a>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPrima" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    News
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownPrima">
+                        <a class="dropdown-item" href="/ ">Indice</a>
+                        <a class="dropdown-item" href="{% url 'news:homeview' %}">Home</a>
+                        <a class="dropdown-item" href="{% url 'news:homeview' %}">Home News</a>
+                        <a class="dropdown-item" href="{% url 'news:lista_articoli' %}">Articoli</a>
+                        <a class="dropdown-item" href="{% url 'news:listaGiornalisti' %}">Giornalisti</a>
+                        <a class="dropdown-item" href="{% url 'news:queryBase' %}">Query varie</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
