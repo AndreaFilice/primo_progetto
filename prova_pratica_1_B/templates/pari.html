@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{%block title%} {{block.super}} | PARI {%endblock title%}
+
+{%block content%}
+    <h2>Contenuto della lista: </h2>
+    <ul>
+        {% for key, value in dict.items %}
+            {% if key == "Numeri Pari" and value > 15 %}
+                <li>{{ key }}: <span style="color: green;">{{ value }}</span></li>
+            {% elif key == "Numeri Pari" and value < 15 %} 
+                <li>{{ key }}: <span style="color: red;">{{ value }}</span></li>
+            {% else %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{%endblock content%}

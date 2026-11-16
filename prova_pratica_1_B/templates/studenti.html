@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block title%} {{block.super}} | STUDENTI {%endblock title%}
+{%block content%}
+    <table style="border: 4px; border-color: black;">
+        <tbody>
+            <tr> 
+                <td>Studenti</td>
+                <td>Presenza</td>
+            </tr>
+            {% for key, value in studenti.items %}
+                <tr> 
+                    <td>{{ key }}</td>
+                    {% if value == True %}
+                        <td style="color: green;">Presente</td>
+                    {% else %}
+                        <td style="color: firebrick;">Assente</td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{%endblock%}
