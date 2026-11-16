@@ -7,8 +7,12 @@
     <hr>
     <h2>Statistiche e Singoli Risultati</h2>
     <p><strong>Numero totale articoli:</strong> {{ numero_totale_articoli }}</p>
-    <p><strong>Giornalista con ID 2:</strong> {{ giornalista_1 }} (Articoli scritti: {{ numero_articoli_giornalista_1 }})</p>
+    <p><strong>Giornalista con ID 1:</strong> {{ giornalista_1 }} (Articoli scritti: {{ numero_articoli_giornalista_1 }})</p>
     <p><strong>Data di riferimento:</strong> {{ data }} | <strong>Soglia visualizzazioni:</strong> {{ visualizzazioni }}</p>
+    {% if articolo_piu_visualizzato %}
+        <h3>Articolo più visualizzato</h3>
+        <p><strong>{{ articolo_piu_visualizzato.titolo }}</strong> - Autore: {{ articolo_piu_visualizzato.giornalista }} ({{ articolo_piu_visualizzato.visualizzazioni }} visualizzazioni)</p>
+    {% endif %}
     {% if giornalista_giovane %}
         <p><strong>Giornalista più giovane (anno nascita più basso in ordine crescente):</strong> {{ giornalista_giovane }} ({{ giornalista_giovane.anno_di_nascita }})</p>
     {% endif %}
@@ -40,6 +44,24 @@
     <h2>Liste di Articoli</h2>
     <h3>Articoli di Rossi</h3>
     {% for articolo in articoli_cognome %}
+        <div>
+            <h4>{{ articolo.titolo }}</h4>
+            <p style="font-weight: 200">{{ articolo.contenuto }}</p>
+            <small>Autore: {{ articolo.giornalista }}</small>
+        </div>
+    {% endfor %}
+
+    <h3>Articoli ordinati per visualizzazioni</h3>
+    {% for articolo in articoli_ordinati %}
+        <div>
+            <h4>{{ articolo.titolo }} ({{ articolo.visualizzazioni }} visualizzazioni)</h4>
+            <p style="font-weight: 200">{{ articolo.contenuto }}</p>
+            <small>Autore: {{ articolo.giornalista }}</small>
+        </div>
+    {% endfor %}
+
+    <h3>Articoli senza visualizzazioni (0)</h3>
+    {% for articolo in articoli_senza_visualizzazioni %}
         <div>
             <h4>{{ articolo.titolo }}</h4>
             <p style="font-weight: 200">{{ articolo.contenuto }}</p>
@@ -136,5 +158,4 @@
             <small>Autore: {{ articolo.giornalista }}</small>
         </div>
     {% endfor %}
-
 {% endblock content %}
